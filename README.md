@@ -54,11 +54,18 @@ The system is built for **high-efficiency environments**. The interface prioriti
 ## ⚙ Setup Instructions
 
 ### 1. Database Setup
-1.  Open **phpMyAdmin** in XAMPP.
-2.  Create a new database (e.g., `bekari`).
-3.  **Import** the provided `.sql` file found in the project folder.
+1. Open **phpMyAdmin** in XAMPP.
+2. Create a new database (e.g., `bekari`).
+3. **Import** the provided `.sql` file found in the project folder.
 
 ### 2. Configuration
 Open your database connection file (e.g., `db_connect.php`) and update your credentials:
 ```php
-$conn = mysqli_connect("localhost", "root", "", "your_database_name");
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bekari";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+?>
