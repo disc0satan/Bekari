@@ -1,0 +1,317 @@
+/* ==================================== */
+/* 1. Global Reset and Background Theme (Minimal Pink) */
+/* ==================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text for contrast */
+    
+    /* Background Image - Path to your abstract, brick background */
+    background-image: url('../images/bakery_bg.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+h1, h2 {
+    color: #f8a7b9; /* Blush Pink/Dark Pink Heading */
+    margin-top: 0;
+    font-weight: 400; 
+}
+
+/* ==================================== */
+/* 2. Navigation (Header/Navbar) - TRANSPARENT AND MINIMAL */
+/* ==================================== */
+header {
+    /* Transparent White Background (50% opaque) */
+    background-color: rgba(255, 255, 255, 0.5); 
+    
+    /* Subtle blur effect on elements behind the header */
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px); /* For Safari compatibility */
+
+    color: #555;
+    padding: 1px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav_logo h1 a {
+    font-family: 'Dancing Script', cursive;
+    color: #f8a7b9; /* Blush Pink for the Logo Text */
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+.nav_link {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_link li a {
+    color: #555; /* Dark Gray link text */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav_link li a:hover, .nav_link li a.active {
+    color: #ffc0cb; /* Baby Pink text on hover/active */
+    background-color: transparent; 
+}
+
+/* ==================================== */
+/* 3. Main Content Containers (Transparent White) */
+/* ==================================== */
+main {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+.list_box, .form_container {
+    /* RGBA white with 0.85 opacity (85% solid, 15% transparent) */
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 1100px; 
+}
+
+/* ==================================== */
+/* 4. Buttons (Green, Pink, Red Actions) */
+/* ==================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    border: none;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+/* Universal Button Hover Effect */
+.btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds a stronger shadow on hover */
+    transform: translateY(-2px); /* Makes the button visually lift */
+}
+
+
+/* Primary Action Button (Add New) - GREEN */
+.add-new {
+    background-color: #60eca1; /* Green */
+    color: white; /* White text for contrast on green */
+    font-size: 1.1em;
+    padding: 12px 30px;
+    margin-bottom: 25px;
+}
+.add-new:hover {
+    background-color: #68ffa9; /* Lighter Green on hover */
+}
+
+/* Submit Button (Forms) - PINK */
+.submit-btn {
+    background-color: #f8a7b9; /* Blush Pink */
+    color: white; 
+    padding: 12px 30px;
+}
+.submit-btn:hover {
+    background-color: #ffc0cb; 
+    color: #333;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background-color: #e9ecef; /* Light Gray */
+    color: #555;
+    padding: 12px 30px;
+}
+.cancel-btn:hover {
+    background-color: #d8dbe0; /* Slightly darker gray on hover */
+    color: #333;
+}
+
+
+/* Table Action Buttons (Smaller Buttons) */
+.action-links a {
+    padding: 7px 12px; 
+    margin: 0 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+/* EDIT Button - CHANGED TO POWDER BLUE */
+.update {
+    background-color: #05c3dc; /* Soft Powder Blue */
+    color: #ffffff; /* Dark text for contrast */
+}
+.update:hover {
+    background-color: #8faefc; /* Slightly darker blue on hover */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transform: none; 
+}
+
+/* DELETE Button - RED */
+.delete {
+    background-color: #e74c3c; 
+    color: white;
+}
+.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transform: none; /* Override the universal lift for small buttons */
+}
+
+
+/* ==================================== */
+/* 5. Data Tables and Forms */
+/* ==================================== */
+
+.data_table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 8px; 
+    margin-top: 20px;
+    font-size: 0.95em; 
+}
+
+.data_table th {
+    background-color: #f8f9fa; /* Very Light Gray Header */
+    color: #555;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.data_table td {
+    background-color: #ffffff; /* Use pure white here for maximum readability within the transparent container */
+    padding: 15px; 
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data_table tbody tr {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); 
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================================== */
+/* 6. Search Bar Styling */
+/* ==================================== */
+.search-and-add {
+    display: flex;
+    justify-content: space-between; /* Pushes the Add button and Search form to opposite sides */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px; /* Space between input and buttons */
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 250px; 
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #f8a7b9; /* Pink focus border */
+    outline: none;
+}
+
+/* ==================================== */
+/* 7. Recipe Form Row (Side-by-Side Layout) */
+/* ==================================== */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between the two columns */
+    margin-bottom: 20px;
+    align-items: flex-start; /* Ensures alignment even if label heights differ */
+}
+
+/* Ensure children fill the space */
+.form-row .form-group {
+    margin-bottom: 0; /* Remove vertical space inside the row */
+    flex-grow: 1;
+}
+
+/* Fix for the select and input text alignment inside the narrow column */
+.form-row select, 
+.form-row input[type="number"] {
+    text-align: left !important; /* Overrides the 'center' alignment if present */
+}
+
+/* ==================================== */
+/* 8. Product Name Recipe Link */
+/* ==================================== */
+.recipe-link {
+    color: #000000; /* Bold Black/Dark Gray by default */
+    font-weight: 500; /* Extra bold for emphasis */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color fade effect */
+}
+
+.recipe-link:hover {
+    color: #f8a7b9; /* Baby Pink on hover */
+}
+.disabled-input {
+    background-color: #f0f0f0 !important; 
+    color: #888;
+}
